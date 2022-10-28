@@ -6,7 +6,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
 
   return (
     <div className="relative w-full flex flex-col">
-      <div className="w-full bg-gradient-to-l from-transparent to-green/60 sm:h-48 h-28"/>
+      <div className="w-full sm:h-48 h-28"/>
         <div className="absolute inset-0 flex items-center">
           <img 
             alt="art"
@@ -25,6 +25,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
           </p>
         </div>
       </div>
+      <div className="w-full sm:h-44 h-24"/>
     </div>
   );
 }
