@@ -22,14 +22,14 @@ const TopChartCard = ({ song, i, isPlaying, activeSong, handlePauseClick, handle
             {song?.title}
           </p>
         </Link>
-        <Link to={`/artists/${song?.artists[0].adamid}`}>
+        {/* <Link to={`/artists/${song?.artists[0].adamid}`}>
           <p className="text-base font-bold text-gray-300 mt-1">
             {song?.subtitle}
           </p>
-        </Link>
+        </Link> */}
       </div>
     </div>
-    <PlayPause 
+    <PlayPause
       isPlaying={isPlaying}
       activeSong={activeSong}
       song={song}
@@ -60,7 +60,7 @@ const TopPlay = () => {
   };
 
   return (
-    <div ref={divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full flex flex-col"> 
+    <div ref={divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full flex flex-col">
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
@@ -70,9 +70,9 @@ const TopPlay = () => {
         </div>
         <div className="mt-4 flex flex-col gap-1">
           {topPlays?.map((song, i) => (
-            <TopChartCard 
-              key={song.key} 
-              song={song} 
+            <TopChartCard
+              key={song.key}
+              song={song}
               i={i}
               isPlaying={isPlaying}
               activeSong={activeSong}
@@ -99,14 +99,14 @@ const TopPlay = () => {
          className="mt-4"
         >
           {topPlays?.map((song, i) => (
-            <SwiperSlide 
+            <SwiperSlide
              key={song.key}
              style={{ width: '25%', height: 'auto' }}
              className="shadow-lg rounded-full animate-slideright"
             >
-              <Link to={`/artists/${song?.artists[0].adamid}`}>
+              {/* <Link to={`/artists/${song?.artists[0]}`}>
                 <img src={song?.images.background} alt="name" className="rounded-full w-full object-cover" />
-              </Link>
+              </Link> */}
             </SwiperSlide>
           ))}
         </Swiper>
